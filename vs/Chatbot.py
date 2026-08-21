@@ -1,0 +1,26 @@
+import random
+
+responses = {
+    "hello": ["Hi there!", "Hello!", "Hey!"],
+    "how are you": ["I'm good!", "Doing great!", "Awesome!"],
+    "bye": ["Goodbye!", "See you later!", "Bye! Take care!"],
+    "how old are you":["I'm 11", "I am 11 years old", "15"],
+    "what is ai":[" ai is a set of technologies that lets computers learn, solve problems, and make decisions like a human.", "ai stand for Artificial Intelligence"],
+    "who are you":["I'm aisha", "myself aisha", "I am aisha"]
+}
+
+while True:
+    user = input("You: ").lower()
+    if user == "bye":
+        print("Bot:", random.choice(responses["bye"]))
+        break
+    found = False
+    
+    for key in responses:
+        if key in user:
+            print("Bot:", random.choice(responses[key]))
+            found = True
+            break
+
+    if not found:
+        print("Bot: I don't understand that yet.")
