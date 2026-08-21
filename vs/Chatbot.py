@@ -15,12 +15,13 @@ while True:
         print("Bot:", random.choice(responses["bye"]))
         break
     found = False
-    
+
     for key in responses:
         if key in user:
             print("Bot:", random.choice(responses[key]))
             found = True
             break
+            
 
     if not found:
         print("Bot: I don't understand that yet.")
